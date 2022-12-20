@@ -3,40 +3,21 @@
     <title>Document</title>
 </head>
 <body>
-  <!--Create a repo name it javascript_basics_of_programming
-Write a simple javascript, that would ask the user to input
-the following Firstname, Lastname, Address and Age.
-Basing from the age value as a numeric, 
-please display the category name range of the age from the list. 
-Ex. 
-1. Age is equals to 3 then dislay "Toddler"
-2. Age is equals to 41 then display "Middle Age Adult"
-Infant = 0-1 year.
-Toddler = 2-4 yrs.
-Child = 5-12 yrs.
-Teen = 13-19 yrs.
-Adult = 20-39 yrs.
-Middle Age Adult = 40-59 yrs.
-Senior Adult = 60+
--->
-<input type="text">
+<h1 style="text-align: center;">Age categories</h1>
+<p id="category"></p>
+
 <script>
-  if(age >= 0 && age <= 1){
-  str = "Infant"; 
-  } else if (age >= 2 && age <= 4){
-  str = "Toddler";
-  }else if (age >= 5 && age <= 12){
-  str = "Child";
-  }else if (age >= 13 && age <= 19){
-  str = "Teen";
-  }else if (age >= 20 && age <= 39){
-  str = "Adult";
-  }else if (age >= 40 && age <= 59){
-  str = "Middle Age Adult";
-  }else if (age >= 60){
-  str = "Senior";
-  }
-  console.alert(str);
-  </script>  
+const age = parseInt(prompt(`Input your age`));
+  if(age >= 0 && age <= 1){str = "Infant";}
+  else if(age >= 2 && age <= 4){str = "Toddler";}
+  else if(age >= 5 && age <= 12){str = "Child";}
+  else if(age >= 13 && age <= 19){str = "Teen";}
+  else if(age >= 20 && age <= 39){str = "Adult";}
+  else if(age >= 40 && age <= 59){str = "Middle Age Adult";}
+  else if(age >= 60){str = "Senior";}
+  console.log(str);
+  document.getElementById("category").innerHTML = (`You are in ${str} Category.`);
+  </script>
+</body>
 </body>
 </html>
